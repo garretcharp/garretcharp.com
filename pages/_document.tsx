@@ -1,9 +1,5 @@
 import { Head, Html, Main, NextScript } from "next/document";
-import { getCssText, styled } from "../stitches.config";
-
-const Body = styled("body", {
-	backgroundColor: "hsl(200 7.0% 8.8%)",
-});
+import { getCssText } from "../stitches.config";
 
 export default function MyDocument() {
 	return (
@@ -13,11 +9,16 @@ export default function MyDocument() {
 					id="stitches"
 					dangerouslySetInnerHTML={{ __html: getCssText() }}
 				/>
+				<style>
+					{`body {
+						background-color: hsl(200 7.0% 8.8%);
+					}`}
+				</style>
 			</Head>
-			<Body>
+			<body>
 				<Main />
 				<NextScript />
-			</Body>
+			</body>
 		</Html>
 	);
 }
