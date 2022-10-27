@@ -36,7 +36,7 @@ export default function Home() {
 				<Text as="h1">Hello, my name is Garret.</Text>
 				<Text>
 					I have a passion for web development, and solving problems. I enjoy
-					creating things that benefit others.
+					creating things that benefit others. (this is a test)
 				</Text>
 			</Container>
 		</React.Fragment>
