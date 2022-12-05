@@ -56,7 +56,6 @@ const tagPosts = getPostsByTag(posts, tag);
           <Card
             href={`/posts/${slugify(frontmatter)}`}
             post={frontmatter}
-            client:load
           />
         ))
       }

@@ -1,6 +1,6 @@
 ---
 author: Garret Harp
-datetime: 2022-12-05T00:00:00Z
+datetime: 2022-12-04
 title: Hello World
 slug: hello-world
 featured: false
