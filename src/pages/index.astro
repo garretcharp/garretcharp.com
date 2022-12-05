@@ -62,6 +62,7 @@ const featuredPosts = sortedPosts.filter(
                   href={`/posts/${slugify(frontmatter)}`}
                   post={frontmatter}
                   secHeading={false}
+                  client:load
                 />
               ))}
             </ul>
@@ -82,6 +83,7 @@ const featuredPosts = sortedPosts.filter(
                   href={`/posts/${slugify(frontmatter)}`}
                   post={frontmatter}
                   secHeading={false}
+                  client:load
                 />
               )
           )
