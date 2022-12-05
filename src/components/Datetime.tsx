@@ -25,26 +25,28 @@ export default function Datetime({ datetime, size = "sm", className }: Props) {
   );
 }
 
+// Month number to name
+const monthNames: { [key: number]: string } = {
+  1: "January",
+  2: "February",
+  3: "March",
+  4: "April",
+  5: "May",
+  6: "June",
+  7: "July",
+  8: "August",
+  9: "September",
+  10: "October",
+  11: "November",
+  12: "December",
+}
+
 const FormattedDatetime = ({ datetime }: { datetime: string }) => {
-  const myDatetime = new Date(datetime);
-
-  const date = myDatetime.toLocaleDateString([], {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
-  const time = myDatetime.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const date = new Date(datetime)
 
   return (
     <>
-      {date}
-      <span aria-hidden="true"> | </span>
-      <span className="sr-only">&nbsp;at&nbsp;</span>
-      {time}
+      {`${monthNames[date.getUTCMonth() + 1]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`}
     </>
   );
 };

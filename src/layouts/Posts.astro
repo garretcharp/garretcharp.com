@@ -32,7 +32,6 @@ const next = pageNum < totalPages ? "" : "disabled";
             <Card
               href={`/posts/${slugify(frontmatter)}`}
               post={frontmatter}
-              client:load
             />
           );
         })
