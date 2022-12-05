@@ -29,7 +29,11 @@ const next = pageNum < totalPages ? "" : "disabled";
       {
         posts.map(({ frontmatter }) => {
           return (
-            <Card href={`/posts/${slugify(frontmatter)}`} post={frontmatter} client:load />
+            <Card
+              href={`/posts/${slugify(frontmatter)}`}
+              post={frontmatter}
+              client:load
+            />
           );
         })
       }
