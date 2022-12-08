@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://garretcharp.com/sitemap-index.xml
